@@ -2,20 +2,20 @@ package variable;
 
 public class Ex01 {
 	public static void main(String[] args) {
-		System.out.println("¾È³çÇÏ¼¼¿ä");
-		System.out.println("Á¦ ÀÌ¸§Àº ¼ÕÈï¹ÎÀÔ´Ï´Ù");
-		System.out.println("¿ÃÇØ ³ªÀÌ´Â " + 30 + "»ìÀÔ´Ï´Ù");
-		System.out.println();   // ³»¿ëÀ» ÀûÁö ¾Ê¾Æµµ ½ÇÇàµÇ°í, ÇÑÁÙ ¾Æ·¡·Î ¶ç¿öÁØ´Ù
+		System.out.println("ì•ˆë…•í•˜ì„¸ìš”");
+		System.out.println("ì œ ì´ë¦„ì€ ì†í¥ë¯¼ì…ë‹ˆë‹¤");
+		System.out.println("ì˜¬í•´ ë‚˜ì´ëŠ” " + 30 + "ì‚´ì…ë‹ˆë‹¤");
+		System.out.println();   // ë‚´ìš©ì„ ì ì§€ ì•Šì•„ë„ ì‹¤í–‰ë˜ê³ , í•œì¤„ ì•„ë˜ë¡œ ë„ì›Œì¤€ë‹¤
 		
-		System.out.println("¼ÕÈï¹ÎÀÇ ³ªÀÌ´Â 30»ìÀÔ´Ï´Ù");
+		System.out.println("ì†í¥ë¯¼ì˜ ë‚˜ì´ëŠ” 30ì‚´ì…ë‹ˆë‹¤");
 		System.out.println();
 		
-		String name = "¼ÕÈï¹Î";
+		String name = "ì†í¥ë¯¼";
 		int age = 30;
 		
-		System.out.println(name + "ÀÇ ³ªÀÌ´Â " + age + "»ìÀÔ´Ï´Ù");
+		System.out.println(name + "ì˜ ë‚˜ì´ëŠ” " + age + "ì‚´ì…ë‹ˆë‹¤");
 		
-		//º¯¼ö¿¡ ´ã±ä °ªÀ» ¹Ù²Ù¸é µ¿ÀÏÇÑ ÄÚµå·Î ´Ù¸¥ °ªÀ» Ã³¸®ÇÒ ¼ö ÀÖ´Ù (ÀÏÀÏÈ÷ »õ·Î ¾²Áö ¾Ê´Â´Ù)
+		//ë³€ìˆ˜ì— ë‹´ê¸´ ê°’ì„ ë°”ê¾¸ë©´ ë™ì¼í•œ ì½”ë“œë¡œ ë‹¤ë¥¸ ê°’ì„ ì²˜ë¦¬í•  ìˆ˜ ìˆë‹¤ (ì¼ì¼íˆ ìƒˆë¡œ ì“°ì§€ ì•ŠëŠ”ë‹¤)
 		
 	}
 }

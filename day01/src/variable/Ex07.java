@@ -3,11 +3,11 @@ package variable;
 public class Ex07 {
 	public static void main(String[] args) {
 		// Wrapper Class
-		// ÀÚ¹Ù¿¡¼­ ¾î¶² µÎ °ªÀ» »óÈ£ÀÛ¿ë ½ÃÅ°±â À§ÇØ¼­ ¹İµå½Ã °´Ã¼ÇüÅÂ·Î Ã³¸®ÇØ¾ß ÇÒ °æ¿ì°¡ ÀÖ´Ù
-		// primitive typeÀº °´Ã¼°¡ ¾Æ´Ï¹Ç·Î, À§ »óÈ²¿¡¼­ Ã³¸®ÇÒ ¼ö ¾ø´Ù
-		// µû¶ó¼­, primitive typeÀÇ µ¥ÀÌÅÍ¸¦ °´Ã¼ÇüÅÂ·Î ¸¸µé±â À§ÇÑ Æ÷Àå Àü¹® Å¬·¡½º°¡ Á¸ÀçÇÑ´Ù
-		// ÀÌ¸¦ Wrapper Class¶ó°í ÇÑ´Ù
-		// Wrapper Class´Â °´Ã¼¿¡ ´ëÇÑ ÀÚ·áÇüÀÌ¹Ç·Î, µ¥ÀÌÅÍ ÀúÀå ¹× ±â´ÉÀÌ Æ÷ÇÔµÇ¾î ÀÖ´Ù
+		// ìë°”ì—ì„œ ì–´ë–¤ ë‘ ê°’ì„ ìƒí˜¸ì‘ìš© ì‹œí‚¤ê¸° ìœ„í•´ì„œ ë°˜ë“œì‹œ ê°ì²´í˜•íƒœë¡œ ì²˜ë¦¬í•´ì•¼ í•  ê²½ìš°ê°€ ìˆë‹¤
+		// primitive typeì€ ê°ì²´ê°€ ì•„ë‹ˆë¯€ë¡œ, ìœ„ ìƒí™©ì—ì„œ ì²˜ë¦¬í•  ìˆ˜ ì—†ë‹¤
+		// ë”°ë¼ì„œ, primitive typeì˜ ë°ì´í„°ë¥¼ ê°ì²´í˜•íƒœë¡œ ë§Œë“¤ê¸° ìœ„í•œ í¬ì¥ ì „ë¬¸ í´ë˜ìŠ¤ê°€ ì¡´ì¬í•œë‹¤
+		// ì´ë¥¼ Wrapper Classë¼ê³  í•œë‹¤
+		// Wrapper ClassëŠ” ê°ì²´ì— ëŒ€í•œ ìë£Œí˜•ì´ë¯€ë¡œ, ë°ì´í„° ì €ì¥ ë° ê¸°ëŠ¥ì´ í¬í•¨ë˜ì–´ ìˆë‹¤
 		
 		//		primitive type			Wrapper Class
 		//		boolean					Boolean
@@ -23,25 +23,25 @@ public class Ex07 {
 		Integer n2 = n1;
 		n1 = n2;
 		
-		// primitive »çÀÌ¿¡¼­ ¾Ï¹¬ÀûÀÎ Çüº¯È¯ÀÌ Àû¿ëµÇ´Â °ü°è¶óµµ Wrapper Class³¢¸®´Â Àû¿ëµÇÁö ¾Ê´Â´Ù
+		// primitive ì‚¬ì´ì—ì„œ ì•”ë¬µì ì¸ í˜•ë³€í™˜ì´ ì ìš©ë˜ëŠ” ê´€ê³„ë¼ë„ Wrapper Classë¼ë¦¬ëŠ” ì ìš©ë˜ì§€ ì•ŠëŠ”ë‹¤
 		Byte by = 10;
 		int n3 = 20;
 		n3 = by;
 				
 		Byte by2 = 10;
 		Integer n4 = 20;
-//		n4 = by2;			// Wrapper Class³¢¸®´Â È£È¯¼ºÀÌ ¾ø´Ù
+//		n4 = by2;			// Wrapper Classë¼ë¦¬ëŠ” í˜¸í™˜ì„±ì´ ì—†ë‹¤
 		n4 = (int)(byte)by2;
 		// Byte -> byte -> int -> Integer
 
 		n4 = by2.intValue();
-		// by2¿¡ ´ã±ä °ªÀ» intÇüÅÂ·Î ¹Ù²ã¼­ ´ëÀÔÇÒ ¼ö ÀÖµµ·Ï ÇØÁÖ´Â ±â´É(ÇÔ¼ö)
+		// by2ì— ë‹´ê¸´ ê°’ì„ intí˜•íƒœë¡œ ë°”ê¿”ì„œ ëŒ€ì…í•  ìˆ˜ ìˆë„ë¡ í•´ì£¼ëŠ” ê¸°ëŠ¥(í•¨ìˆ˜)
 		System.out.println("n4 : " + n4);
 		
-		System.out.println("int ÀÚ·áÇüÀÇ ÃÖ¼Ò°ª : " + Integer.MIN_VALUE);
-		System.out.println("int ÀÚ·áÇüÀÇ ÃÖ´ë°ª : " + Integer.MAX_VALUE);
+		System.out.println("int ìë£Œí˜•ì˜ ìµœì†Œê°’ : " + Integer.MIN_VALUE);
+		System.out.println("int ìë£Œí˜•ì˜ ìµœëŒ€ê°’ : " + Integer.MAX_VALUE);
 		
-		System.out.println("¹®ÀÚ¿­ 1234¸¦ Á¤¼öÇüÅÂ·Î ¹Ù²Ù±â : " + Integer.parseInt("1234"));
+		System.out.println("ë¬¸ìì—´ 1234ë¥¼ ì •ìˆ˜í˜•íƒœë¡œ ë°”ê¾¸ê¸° : " + Integer.parseInt("1234"));
 		String  s = "1234";
 		System.out.println(s + 10);
 		int n = Integer.parseInt(s);

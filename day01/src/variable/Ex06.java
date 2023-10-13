@@ -3,17 +3,17 @@ package variable;
 public class Ex06 {
 	public static void main(String[] args) {
 		
-		// ¿©·¯ º¯¼ö¸¦ ¼±¾ğÇÒ ¶§, ÀÚ·áÇüÀÌ °°´Ù¸é ÇÑ¹ø¿¡ ¼±¾ğÇÒ ¼öµµ ÀÖ´Ù
+		// ì—¬ëŸ¬ ë³€ìˆ˜ë¥¼ ì„ ì–¸í•  ë•Œ, ìë£Œí˜•ì´ ê°™ë‹¤ë©´ í•œë²ˆì— ì„ ì–¸í•  ìˆ˜ë„ ìˆë‹¤
 		int n1 = 57, n2 = 32, n3 = 78;
 		
 		int total = n1 + n2 + n3;
-		double avg = total / 3;				// ¾Ï¹¬Àû Çüº¯È¯, int°¡ double·Î ¹Ù²î¸é¼­ ´ëÀÔµÈ´Ù
-//		double avg = total / (double)3;		// ¸í½ÃÀû Çüº¯È¯, °è»êÀü¿¡ ¹Ì¸® double·Î ¹Ù²ã¼­ °è»êÇÑ´Ù
+		double avg = total / 3;				// ì•”ë¬µì  í˜•ë³€í™˜, intê°€ doubleë¡œ ë°”ë€Œë©´ì„œ ëŒ€ì…ëœë‹¤
+//		double avg = total / (double)3;		// ëª…ì‹œì  í˜•ë³€í™˜, ê³„ì‚°ì „ì— ë¯¸ë¦¬ doubleë¡œ ë°”ê¿”ì„œ ê³„ì‚°í•œë‹¤
 //		double avg = total / 3.0;
-											// ´ëÀÔ ¿¬»ê¿¡¼­ ÁÂº¯¿¡´Â º¯¼ö°¡ ÇÑ°³¸¸ ¿Ã ¼ö ÀÖ´Ù
+											// ëŒ€ì… ì—°ì‚°ì—ì„œ ì¢Œë³€ì—ëŠ” ë³€ìˆ˜ê°€ í•œê°œë§Œ ì˜¬ ìˆ˜ ìˆë‹¤
 		
-		System.out.println("ÇÕ°è : " + total );
-		System.out.println("Æò±Õ : " + avg);
+		System.out.println("í•©ê³„ : " + total );
+		System.out.println("í‰ê·  : " + avg);
 
 		
 	}
