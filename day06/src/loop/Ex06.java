@@ -20,6 +20,17 @@ public class Ex06 {
 			day += 1;		
 		}
 		System.out.printf("%d일째 입금 된 총 금액은 : %,d원", day, sum);
+	
+		
+		int day2 = 1;
+		long sum2 = 0;
+		long money2 = 10;
+		
+		while (day2 <= 30);
+			sum2 += money;
+			money *= 2;
+			day++;
+			
 		
 	}
 }
