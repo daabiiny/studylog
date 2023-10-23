@@ -1,7 +1,5 @@
 package string;
 
-import java.util.Scanner;
-
 public class Quiz3 {
 	public static void main(String[] args) {
 		
@@ -27,9 +25,18 @@ public class Quiz3 {
 //		2132-6464-2020-4121
 		
 		String input = "1162-3434-1010-2113";	// 유효하지 않음
-		input.replace("-", "");
+		input = input.replace("-", "");
+//		
+//		char[] arr = input.toCharArray();
+//		System.out.println(arr);
 		
-		
-		
+		for(int i = 0; i <= input.length(); i++) {
+			int num = i;
+			if (i % 2 == 0) {
+				System.out.print(num);
+			}else
+				System.out.print(num * 2);
+
+		}
 	}
 }
