@@ -59,7 +59,5 @@ public class Ex09 {
 			}System.out.println();
 		}System.out.println();
 		
-		
-		
 	}
 }
