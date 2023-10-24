@@ -26,17 +26,31 @@ public class Quiz3 {
 		
 		String input = "1162-3434-1010-2113";	// 유효하지 않음
 		input = input.replace("-", "");
-//		
-//		char[] arr = input.toCharArray();
-//		System.out.println(arr);
 		
-		for(int i = 0; i <= input.length(); i++) {
-			int num = i;
+//		인덱스를 기준으로 
+		
+		char[] arr = input.toCharArray();
+		System.out.println(arr);
+		int sum = 0;
+		
+		for(int i = input.length() - 1; i >= 0; i--) {
+			char ch = arr[i];
+			int num = ch - 48;
 			if (i % 2 == 0) {
-				System.out.print(num);
-			}else
-				System.out.print(num * 2);
+				num *= 2;
 
+			}
+			if (num >= 10) {
+				num = ( num / 10 ) + ( num % 10 );
+			
+			} 
+			sum += num;
+			
 		}
+		if (sum % 10 == 0) {
+			System.out.println("유효한 카드번호입니다");
+		}
+		else
+			System.out.println("유효하지 않은 카드번호입니다");
 	}
 }
