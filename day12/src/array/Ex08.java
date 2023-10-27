@@ -17,9 +17,19 @@ public class Ex08 {
 		}
 	}
 	
+	static void plus(int num) {
+		num += 1;
+	}
+	
 	public static void main(String[] args) {
+		
+		int n1 = 5;
+		System.out.println("n1 : " + n1);
+		plus(n1);
+		System.out.println("n1 : " + n1);
+		
 		Random ran = new Random();
-		int[] arr = new int[1000000];	// 100만개의 정렬
+		int[] arr = new int[100];	// 100만개의 정렬
 		for(int i = 0; i < arr.length; i++) {
 			arr[i] = ran.nextInt(arr.length);
 		}
