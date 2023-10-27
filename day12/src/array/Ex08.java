@@ -19,15 +19,18 @@ public class Ex08 {
 	
 	public static void main(String[] args) {
 		Random ran = new Random();
-		int[] arr = new int[100000];
+		int[] arr = new int[1000000];	// 100만개의 정렬
 		for(int i = 0; i < arr.length; i++) {
 			arr[i] = ran.nextInt(arr.length);
 		}
 		System.out.println(Arrays.toString(arr));
 		
-		System.out.println(System.currentTimeMillis());
+		long start = System.currentTimeMillis();	// 정렬 전 현재 시간
 		selectionSort(arr);
-		System.out.println(System.currentTimeMillis());
+		long end = System.currentTimeMillis();		// 정렬 후 현재 시간
+		
+		System.out.println(Arrays.toString(arr));
+		System.out.printf("%.2f sec\n", (end - start) / 1000.0);	// 걸린 시간
 	}
 	
 		
