@@ -8,8 +8,11 @@ class TV{
 	boolean power;
 	int channelUp;
 	int channelDown;
+	int channelNow;
 	int volumeUp;
 	int volumeDown;
+	int volumeNow;
+	int mute;
 	
 	
 	// TV의 기능을 메서드로 정의하세요
@@ -27,18 +30,60 @@ class TV{
 	}
 	
 	void channelUp() {
-		int num = channelUp / 10;
-		if (channelUp / 10 == 0) {
-			System.out.printf("%d번 채널입니다", channelUp);
-			channelUp += 1;
-		}
-		else
-			System.out.printf("지원하지 않는 채널입니다. 다시 %d번 채널입니다.", num);
-			num += 1;
+		int num1 = channelUp % 10;
+			System.out.printf("%d번 채널입니다", num1);
+			channelUp++;
+			channelNow = num1;
+	}
+	
+	void channelDown() {
+		channelDown = channelNow - 1 ;
+		channelNow--;
+		
+		if (channelNow < 0) {
+//			channelNow = -channelNow;
 		}
 		
+		int num2 = channelNow % 10;
+		System.out.printf("%d번 채널입니다", num2);
+			
+		}
+		
+	void volumeUp() {
+		int volume = volumeUp;
+		
+		if (volume <= 10) {
+			System.out.printf("현재 볼륨은 %d 입니다", volume);
+			volumeUp++;	
+		}
+		else {
+			System.out.println("더이상 볼륨을 올릴 수 없습니다");
+		}
+		volumeNow = volume;
+	}
+		
+	
+	void volumeDown() {
+		volumeDown = volumeNow;
+		int volume1 = volumeDown;
+		
+		if (volume1 <= 10) {
+			System.out.printf("현재 볼륨은 %d 입니다", volume1);
+			volumeDown--;
+		}
+		
+		if (volume1 < 0) {
+			System.out.println("더 이상 볼륨을 내릴 수 없습니다");
+		}	
+		
+		
+		}
+	
+	void mute() {
 		
 	}
+		
+}
 	
 	
 	// 생성자에서 객체 생성시 초기값을 지정하세요
@@ -62,10 +107,21 @@ public class Quiz3 {
 			// 입력된 메뉴에 따라서 tv객체의 메서드를 호출하는 형태로 진행
 			case 1:
 				tv.turn();
-				
-			case 2:
+				break;
+			case 4:
 				tv.channelUp();
 				break;
+			case 7:
+				tv.channelDown();
+				break;
+			case 6:
+				tv.volumeUp();
+				break;
+			case 9:
+				tv.volumeDown();
+				break;
+			case 5:
+				tv.mute();
 			case 0:
 				break LOOP;
 			}
