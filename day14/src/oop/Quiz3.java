@@ -37,16 +37,14 @@ class TV{
 	}
 	
 	void channelDown() {
-		channelDown = channelNow - 1 ;
-		channelNow--;
+		channelDown = channelNow;
 		
-		if (channelNow < 0) {
-//			channelNow = -channelNow;
+		if (channelNow < 1) {
+			channelNow = 10;
 		}
+		channelNow--;	
+		System.out.printf("%d번 채널입니다", channelNow);
 		
-		int num2 = channelNow % 10;
-		System.out.printf("%d번 채널입니다", num2);
-			
 		}
 		
 	void volumeUp() {
@@ -56,41 +54,39 @@ class TV{
 			System.out.printf("현재 볼륨은 %d 입니다", volume);
 			volumeUp++;	
 		}
-		else {
+		if (volume > 10) {
 			System.out.println("더이상 볼륨을 올릴 수 없습니다");
 		}
 		volumeNow = volume;
 	}
-		
-	
+
 	void volumeDown() {
 		volumeDown = volumeNow;
-		int volume1 = volumeDown;
-		
-		if (volume1 <= 10) {
-			System.out.printf("현재 볼륨은 %d 입니다", volume1);
-			volumeDown--;
+		volumeDown--;
+		if (volumeDown >1) {
+			System.out.printf("현재 볼륨은 %d 입니다", volumeDown);			
 		}
 		
-		if (volume1 < 0) {
+		else if (volumeDown == 0) {
 			System.out.println("더 이상 볼륨을 내릴 수 없습니다");
-		}	
-		
-		
 		}
+	}
 	
 	void mute() {
 		
 	}
 		
-}
+
 	
 	
 	// 생성자에서 객체 생성시 초기값을 지정하세요
 	// 매개변수로 받지 않아도 초기값을 지정할 수 있습니다
 	// 에를 들면 채널의 초기값이 0인것은 이상합니다. 다른 값이 초기값이 되도록 하세요
-	
-
+	TV(){
+		this.channelNow = 1;
+		this.volumeNow = 1;
+	}
+}
 
 public class Quiz3 {
 	public static void main(String[] args) {
@@ -130,3 +126,4 @@ public class Quiz3 {
 		System.out.println("프로그램 종료");
 	}
 }
+
