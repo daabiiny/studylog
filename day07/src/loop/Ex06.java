@@ -63,10 +63,5 @@ public class Ex06 {
 		
 		
 		
-		
-		
-		
-		
-		
 	}
 }
