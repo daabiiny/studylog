@@ -17,6 +17,7 @@ class Message{
 		other.receieveMessage(this, message);
 	}
 	
+
 	void receieveMessage(Message sender, String message) {
 		System.out.printf(" === %s의 화면 ===\n", this.name);
 		System.out.printf("%s : %s\n", sender.name, message);
