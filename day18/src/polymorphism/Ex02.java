@@ -65,6 +65,7 @@ class Airplane{
 	private Human[] seat = new Human[4];
 	
 	public boolean entrance(Human guest) {		// 손님이 입장을 시도하면
+		guest.info();							// 업캐스팅 상태에서 오버라이딩 메서드를 호출한다 (생략가능)
 		boolean result = false;					// 결과 반환 변수 (기본값 false)
 		for(int i = 0; i < seat.length; i++) {	// 준비된 좌석(배열)중에서
 			if(seat[i] == null) {				// 빈 칸을 찾아서
@@ -116,20 +117,35 @@ public class Ex02 {
 		Human guest3 = new Human("신유진");
 		Human guest4 = new Human("왕제은");
 		
-		Human[] queue = { doctor, guest1, guest2, guest3, guest4 };	// 배열
-		List<Human> list = Arrays.asList(queue);					// 배열을 리스트로
-		Collections.shuffle(list);									// 리스트 내부 순서를 랜덤으로 섞는다
-		list.toArray(queue);										// 다시 배열로
-		
-		for(int i = 0; i < queue.length; i++) {
+		// 서브클래스에 의해 생성된 객체를 배열에 넣을 떄 업캐스팅이 발생한다
+//		Human[] queue = { doctor, guest1, guest2, guest3, guest4 };	// 배열 (대기열)
+//		List<Human> list = Arrays.asList(queue);					// 배열을 리스트로
+//		Collections.shuffle(list);									// 리스트 내부 순서를 랜덤으로 섞는다
+//		list.toArray(queue);										// 다시 배열로
+//		
+//		for(int i = 0; i < queue.length; i++) {
 //			queue[i].info();
-			boolean flag = air.entrance(queue[i]);
-			System.out.printf("%s : 탑승 %s\n", queue[i].name, flag ? "성공" : "실패");
-		}
+//			boolean flag = air.entrance(queue[i]);
+//			System.out.printf("%s : 탑승 %s\n", queue[i].name, flag ? "성공" : "실패");
+//		}
+		
+		// 이렇게 쓰면 guest1이 무조건 아픔!
+		air.entrance(doctor);	// 서브클래스의 객체를 함수로 전달할때
+		air.entrance(guest1);	// 매개변수 타입이 슈퍼클래스이면 업캐스팅이 이루어진다
+		air.entrance(guest2);
+		air.entrance(guest3);
+		air.entrance(guest4);
+		
+		Human test = guest1;	//  명시적 형변환 없이, 암묵적으로 형변환이 이루어진다
+		
 		System.out.println();
 		
 		air.simulationEmergency(1);
 		
+		// 슈퍼클래스의 배열에 담거나, 슈퍼클래스 타입의 매개변수에 전달하면 업캐스팅이 발생한다
+		// 업캐스팅 상태에서도 오버라이딩 매서드는 바로 호출하여 실행하면 된다
+		// 오버라이딩이 아닌 고유 매서드는 다운캐스팅 후 실행해야 한다
+		// 다운캐스팅 하기 전에 instanceof를 활용하여 타입을 확인하고 형변환을 수행해야 한다
 		
 	}
 }
