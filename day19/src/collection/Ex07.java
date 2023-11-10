@@ -3,7 +3,9 @@ package collection;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.LinkedHashMap;
 import java.util.Properties;
 import java.util.Scanner;
@@ -80,10 +82,12 @@ public class Ex07 {
 		
 		File f = new File("pro.txt");
 		FileOutputStream fos = new FileOutputStream(f);
-		pro.store(fos, "String 클래스 함수");
+		OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
+		pro.store(osw, "String Class Function");
 		
-		
-		
-		
+		// Map의 또다른 사용용도
+		// 여러 값을 묶어서 표현하거나 전달해야 하는데
+		// 그에 맞는 클래스를 작성하기 번거로울때 (사용빈도가 낮아서)
+		// 클래스를 작성하는 대신, Map에 저장하여 한번에 전달하는 용도로도 사용한다
 	}
 }
