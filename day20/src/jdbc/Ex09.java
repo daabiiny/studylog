@@ -94,6 +94,5 @@ public class Ex09 {
 		list.forEach(ob -> System.out.printf("%s : $%,d\n", ob.getFirstName(), ob.getSalary()));
 		
 		
-		
 	}
 }
