@@ -8,7 +8,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Ex09 {
 	public static void main(String[] args) throws Exception {
 		
