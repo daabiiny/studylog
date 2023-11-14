@@ -15,6 +15,5 @@ public class Ex10 {
 		for(DTO dto : list) {
 			System.out.printf("%s : $%,d\n", dto.getFirstName(), dto.getSalary());
 		}
-		
 	}
 }
