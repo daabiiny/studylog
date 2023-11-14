@@ -1,10 +1,12 @@
 package book5;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 // 데이터 저장소(배열 -> 리스트 -> 파일 -> DB)를 직접 참조하거나, 연결할 수 있음
 // 프로그램의 주요 기능(목록/추가/삭제 등)을 모아둔 클래스
@@ -38,7 +40,9 @@ public class Handler {
 			FileOutputStream fos = new FileOutputStream(f);
 			
 			// 스트림으로 문자열 형식 데이터를 전달하는 기능이 추가된 클래스
-			OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
+			OutputStreamWriter osw = new OutputStreamWriter(fos);
+			
+			osw.write("/ufeff");
 			
 			for(Book ob : list) {
 				String name = ob.getName();
@@ -58,7 +62,28 @@ public class Handler {
 		catch(IOException e) {
 			e.printStackTrace();
 		}
-	}
+	}// end of save()
+	public void load() {
+		try {
+			Scanner sc = new Scanner(f);
+			String data = "";
+			while(sc.hasNextLine()) {
+				data = sc.nextLine();
+				if(data.length() != 0) {
+					String[] arr = data.split(",");
+					Book b = new Book();
+					b.setName(arr[0]);
+					b.setAuthor(arr[1]);
+					b.setPublisher(arr[2]);
+					b.setPrice(Integer.parseInt(arr[3]));
+					list.add(b);
+				}
+			}
+			sc.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}// end of load()
 	
 	// 배열을 전달받아서, 배열 내부의 각 객체를 서식에 맞게 출력하는 함수 (case 1)
 	public void showList() {
