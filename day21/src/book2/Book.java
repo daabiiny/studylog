@@ -33,17 +33,6 @@ public class Book {
 			this.publisher = publisher;
 		}
 		
-		public Book() {
-			super();
-			this.name = name;
-			this.author = author;
-			this.price = price;
-			this.publisher = publisher;
-		}
-		
-		
-		
-		
 		
 }
 

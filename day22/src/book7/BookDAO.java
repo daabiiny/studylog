@@ -27,7 +27,7 @@ public class BookDAO {
 	// 전달받은 객체를 DB에 저장하기
 	public int insertBook(BookDTO dto) {
 		int row = 0;
-		String sql = "insert into book values (?, ?, ?, ?)";	// 쿼리문 형식만 준비
+		String sql = "insert into book values (?, ?, ?, ?)";	// 쿼리문 형식만 준비 -> 값이 바뀌어야 하는거 ?로
 		row = template.update(sql, dto.getName(), dto.getAuthor(), dto.getPublisher(), dto.getPrice());
 		return row;
 	}
