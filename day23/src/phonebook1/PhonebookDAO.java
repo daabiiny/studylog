@@ -9,7 +9,7 @@ public class PhonebookDAO {
 	
 	// 전체 목록 불러오기
 	public ArrayList<PhonebookDTO> selectList(){
-		String sql = "select * from phonebook";
+		String sql = "select * from phonebook order by favorite desc, name";
 		
 		RowMapper<PhonebookDTO> mapper = rs -> {
 			PhonebookDTO dto = new PhonebookDTO();
