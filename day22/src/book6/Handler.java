@@ -23,7 +23,7 @@ public class Handler {
 	public int insertBook(BookDTO ob) {
 		int row = 0;
 		BookDAO dao = new BookDAO();
-		row = dao.insertBook(ob);	// 애인이 넘겨준 객체를 dao로 전달하여 추가한다
+		row = dao.insertBook(ob);	// 메인이 넘겨준 객체를 dao로 전달하여 추가한다
 		return row;					// 추가 결과 점수를 다시 메인으로 반환한다
 	}
 	
