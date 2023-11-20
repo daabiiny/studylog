@@ -28,7 +28,6 @@ public class Main {
 		return book;
 	}
 	
-	
 	public static void main(String[] args) throws Exception {
 		
 		Handler handler = new Handler();
@@ -51,6 +50,7 @@ public class Main {
 			case 1:
 				handler.showList();
 				break;
+				
 			case 2:
 				book = getBookFromUserInput(sc);
 				row = handler.insertBook(book);
@@ -85,5 +85,5 @@ public class Main {
 		}
 		
 		
-}
+	}
 }

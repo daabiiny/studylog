@@ -15,8 +15,6 @@ public class Main {
 		System.out.print("번호 입력 : ");
 		dto.setPnum(sc.nextLine());
 		
-		
-		
 	}
 	
 	public static void main(String[] args) throws Exception {
