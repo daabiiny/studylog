@@ -1,12 +1,12 @@
 package date;
 
-//DEPARTMENT_ID	NUMBER(4,0)	No	
+//DEPARTMENT_ID		NUMBER(4,0)	No	
 //DEPARTMENT_NAME	VARCHAR2(30 BYTE)	No	
-//MANAGER_ID	NUMBER(6,0)	Yes	
-//LOCATION_ID	NUMBER(4,0)	Yes	
+//MANAGER_ID		NUMBER(6,0)	Yes	
+//LOCATION_ID		NUMBER(4,0)	Yes	
 
 public class DepartmentsDTO {
-
+	
 	private int department_id;
 	private int manager_id;
 	private int location_id;
@@ -36,7 +36,6 @@ public class DepartmentsDTO {
 	public void setDepartment_name(String department_name) {
 		this.department_name = department_name;
 	}
-	
 	
 	
 	
