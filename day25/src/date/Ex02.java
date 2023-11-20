@@ -33,6 +33,7 @@ public class Ex02 {
 		java.sql.Date d5 = new java.sql.Date(d4.getTime());
 		System.out.println("d5 : " + d5);
 		
+		
 		SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy년 MM월 dd일 a hh시 mm분 ss초");
 		String s1 = sdf2.format(d5);	// Date를 String으로
 		System.out.println("s1 : " + s1);
