@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 public class Ex02 {
 	public static void main(String[] args) throws Exception {
 		
-		// java.sql.Date의 toStrig()은 yyyy-MM-dd 형식으로 출력하게 되어 있다
+		// java.sql.Date의 toString()은 yyyy-MM-dd 형식으로 출력하게 되어 있다
 		// java.sql.Date의 생성자는 반드시 long값을 전달해야만 한다 (기본생성자 없음)
 		java.sql.Date d1 = new java.sql.Date(0); // 0이라도 넣어야함
 		System.out.println("d1 : " + d1);
