@@ -39,14 +39,5 @@ public class Ex01 {
 //		ob.age = 16;
 		ob.show();
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 }
